@@ -9,17 +9,16 @@ import TessaractWorker from "./components/TessaractWorker";
 // CHI_SIM: 'chi_sim',
 //   CHI_TRA: 'chi_tra',
 // import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+
 import Progress from "./components/Progress";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
+
 import CardContent from "@mui/material/CardContent";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import Skeleton from "@mui/material/Skeleton";
-import FileUpload from "./components/FileUpload";
+
 // ประกาศคอมโพเนนต์หลักของแอป
 function App() {
   // ใช้ Hook useState เพื่อเก็บข้อมูลไฟล์ที่ถูกเลือกและภาษาที่ถูกเลือก

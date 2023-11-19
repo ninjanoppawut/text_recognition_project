@@ -9,6 +9,7 @@
 .control-container {
   padding-top: 20px;
   margin-left: 25px;
+  padding-left: 30px;
   display: flex;
   justify-content: center;
 }
@@ -17,7 +18,7 @@
   width: 100px;
 }
 .inputfile {
-  margin-left: 40px;
+  margin-left: 20px;
   margin-top: 5px;
   padding: 5px;
 }
