@@ -117,7 +117,7 @@ function App() {
         {/* ส่วนที่ใช้เรียกใช้คอมโพเนนต์ TessaractWorker ที่เราสร้าง */}
 
         <div className="tessarat-container">
-          <Card sx={{ maxWidth: 1200, minWidth: 620, minHeight: 400 }}>
+          <Card sx={{ maxWidth: 1200, minWidth: 450, minHeight: 400 }}>
             <CardContent>
               <TessaractWorker
                 selectedFile={selectedFile}
