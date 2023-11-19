@@ -7,21 +7,26 @@
   padding-top: 10px;
 }
 .control-container {
-  padding-top: 20px;
+  /* padding-top: 20px;
   margin-left: 25px;
   padding-left: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: center; */
+  padding-top: 20px;
 }
 .langauge-selecter {
   padding: 5px;
   width: 100px;
 }
 .inputfile {
-  margin-left: 20px;
-  margin-top: 5px;
-  padding: 5px;
+  /* margin-left: 20px; */
+  margin-top: 20px;
+  padding: 10px;
+  padding-left: 80px;
+  display: flex;
+  justify-content: center;
 }
+
 .recog-btn {
   margin-left: 5px;
   padding: 5px;
