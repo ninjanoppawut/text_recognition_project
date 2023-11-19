@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+
+  background: linear-gradient(
+    to right,
+    #28185b,
+    #6c1ca1
+  ); /* Gradient from left to right */
+  color: #fff;
+}
+
+.logo {
+  margin-left: 20px;
+  h1 {
+    margin: 0;
+    color: #fff; /* Text color */
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+
+  li {
+    margin: 0 10px;
+    color: #fff; /* Text color */
+  }
+}

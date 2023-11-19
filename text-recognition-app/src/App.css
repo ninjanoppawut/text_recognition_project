@@ -1,8 +1,13 @@
+.main {
+  background-color: rgb(240, 240, 240);
+  height: 100vh;
+}
 .App {
   text-align: center;
   padding-top: 10px;
 }
 .control-container {
+  padding-top: 20px;
   display: flex;
   justify-content: center;
 }
@@ -11,17 +16,50 @@
   width: 100px;
 }
 .inputfile {
-  margin-left: 20px;
+  margin-left: 40px;
+  margin-top: 5px;
   padding: 5px;
 }
 .recog-btn {
   margin-left: 5px;
   padding: 5px;
 }
+.tessarat-container {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
 .tessaract-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 20px;
+  /* padding-left: 10rem;
+  padding-right: 10rem; */
 }
+@media only screen and (max-width: 767px) {
+  .tessaract-result {
+    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .langauge-selecter {
+    padding: 0;
+    width: fit-content;
+  }
+}
+.text-select {
+  padding: 5px;
+  margin-right: 10px;
+}
+.file-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 /* .App-logo {
   height: 40vmin;
   pointer-events: none;

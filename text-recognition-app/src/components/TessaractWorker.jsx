@@ -12,6 +12,7 @@ function TessaractWorker(props) {
   // ฟังก์ชัน recognizeText ทำ OCR โดยใช้ Tesseract.js
   const recognizeText = async () => {
     try {
+      props.handleProgress(true);
       // ตรวจสอบว่ามีไฟล์รูปที่ถูกเลือกหรือไม่
       if (props.selectedFile) {
         // เรียกใช้ Tesseract.js เพื่อทำ OCR
@@ -24,14 +25,17 @@ function TessaractWorker(props) {
         console.log("result", result.data.text);
         // เก็บข้อความที่ได้ลงใน state เพื่อนำไปแสดงผลใน UI
         setTextAfterRecognize(result.data.text);
+        props.handleProgress(false);
       } else {
         // ถ้าไม่มีไฟล์รูปที่ถูกเลือก แสดงข้อความแจ้งเตือนใน Console
         console.log("Please select an image file first");
+        props.handleProgress(false);
       }
     } catch (error) {
       // กรณีเกิดข้อผิดพลาดในขณะทำ OCR แสดงข้อความผิดพลาดใน Console
       console.error("Error during text recognition:", error);
       // จัดการข้อผิดพลาดตามที่ต้องการ (เช่น แสดงข้อความผิดพลาดให้ผู้ใช้)
+      props.handleProgress(false);
     }
   };
   // useEffect ที่ถูกใช้เพื่อให้ recognizeText ทำงานเมื่อ props.selectedFile เปลี่ยน
@@ -44,7 +48,7 @@ function TessaractWorker(props) {
   // ส่วนการแสดงผล UI ของคอมโพเนนต์
   return (
     <div className="tessaract-result">
-      Tessaract Worker: <p>{textAfterRecognize}</p>
+      <p>{textAfterRecognize}</p>
     </div>
   );
 }
