@@ -76,7 +76,45 @@ function App() {
               <MenuItem value="chi_tra"> จีน (ดั่งเดิม)</MenuItem>
             </Select>
           </FormControl>
-          {/* <select
+
+          <div className="inputfile">
+            <label className="">
+              <input type="file" accept="image/*" onChange={handleFileUpload} />
+            </label>
+          </div>
+        </div>
+        {/* ส่วนที่ใช้เรียกใช้คอมโพเนนต์ TessaractWorker ที่เราสร้าง */}
+
+        <div className="tessarat-container">
+          <Card
+            sx={{
+              maxWidth: 1200,
+              minWidth: 500,
+              minHeight: 600,
+              "@media (max-width: 600px)": {
+                maxWidth: "100%",
+                minWidth: "100%",
+                minHeight: "400",
+              },
+            }}
+          >
+            <CardContent>
+              <TessaractWorker
+                selectedFile={selectedFile}
+                selectedLang={selectedLang}
+                handleProgress={handleProgress}
+              />
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+/* <select
             className="langauge-selecter"
             defaultValue="eng"
             onChange={handleLangSelected}
@@ -93,42 +131,20 @@ function App() {
             <option value="chi_tra" selected>
               จีน (ดั่งเดิม)
             </option>
-          </select> */}
-          {/* เลือกไฟล์ */}{" "}
-          {/* <FileUpload
+          </select> */
+
+/* เลือกไฟล์ */
+
+/* <FileUpload
               type="file"
               accept="image/*"
               className="inputfile"
               onChange={handleFileUpload}
-            /> */}
-          {/* <input
+            /> */
+
+/* <input
             type="file"
             accept="image/*"
             className="inputfile"
             onChange={handleFileUpload}
-          /> */}
-          <div className="inputfile">
-            <label className="">
-              <input type="file" accept="image/*" onChange={handleFileUpload} />
-            </label>
-          </div>
-        </div>
-        {/* ส่วนที่ใช้เรียกใช้คอมโพเนนต์ TessaractWorker ที่เราสร้าง */}
-
-        <div className="tessarat-container">
-          <Card sx={{ maxWidth: 1200, minWidth: 390, minHeight: 440 }}>
-            <CardContent>
-              <TessaractWorker
-                selectedFile={selectedFile}
-                selectedLang={selectedLang}
-                handleProgress={handleProgress}
-              />
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default App;
+          /> */

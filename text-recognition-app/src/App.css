@@ -23,10 +23,27 @@
   margin-top: 20px;
   padding: 10px;
   padding-left: 80px;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
+@media (min-width: 1024px) {
+  /* Styles for laptop-sized screens */
+  .control-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+  }
 
+  .langauge-selecter {
+    width: 200px; /* Adjust width as needed for the larger screen */
+  }
+
+  .inputfile {
+    padding-left: 80px;
+    margin-bottom: 20px; /* Adjust left padding as needed for the larger screen */
+  }
+}
 .recog-btn {
   margin-left: 5px;
   padding: 5px;
